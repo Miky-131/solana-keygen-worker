@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run react-vite:serve",
-    "dev:react-webpack": "nx run react-webpack:serve"
+    "dev:react-webpack": "nx run react-webpack:serve",
+    "build": "nx run react-vite:build"
   },
   "private": true,
   "dependencies": {

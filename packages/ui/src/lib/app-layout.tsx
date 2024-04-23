@@ -12,22 +12,22 @@ export function AppLayout({ children, links }: { children: ReactNode; links: UiH
   ]
   return (
     <UiLayout
-      // header={
-      //   <UiHeader
-      //     opened={opened}
-      //     toggle={toggle}
-      //     links={links}
-      //     profile={
-      //       <Group>
-      //         {icons.map(({ href, icon }) => (
-      //           <ActionIcon key={href} variant="light" size="lg" component="a" href={href} target="_blank">
-      //             {icon}
-      //           </ActionIcon>
-      //         ))}
-      //       </Group>
-      //     }
-      //   />
-      // }
+      header={
+        <UiHeader
+          opened={opened}
+          toggle={toggle}
+          links={links}
+          profile={
+            <Group>
+              {icons.map(({ href, icon }) => (
+                <ActionIcon key={href} variant="light" size="lg" component="a" href={href} target="_blank">
+                  {icon}
+                </ActionIcon>
+              ))}
+            </Group>
+          }
+        />
+      }
     >
       <UiContainer>{children}</UiContainer>
     </UiLayout>
