@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:react-vite": "nx run react-vite:serve",
+    "start": "nx run react-vite:serve",
     "dev:react-webpack": "nx run react-webpack:serve"
   },
   "private": true,
