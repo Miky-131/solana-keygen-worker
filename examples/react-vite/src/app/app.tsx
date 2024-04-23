@@ -8,10 +8,10 @@ import { grindKeypair } from './grind-geypair'
 export function App() {
   return (
     <UiThemeProvider>
-      <AppLayout links={[{ label: 'Grind Keypair', link: '/grind-keypair' }]}>
+      <AppLayout links={[{ label: 'Home', link: '/sol-keypair' }]}>
         {useRoutes([
-          { path: '/', element: <Navigate replace to="/grind-keypair" /> },
-          { path: '/grind-keypair', element: <GrindKeypairFeature grind={grindKeypair} /> },
+          { path: '/', element: <Navigate replace to="/sol-keypair" /> },
+          { path: '/sol-keypair', element: <GrindKeypairFeature grind={grindKeypair} /> },
           { path: '*', element: <UiNotFound /> },
         ])}
       </AppLayout>

@@ -23,19 +23,19 @@ export function SearchForm({
         style={{ flex: 1 }}
         label="Search for public key"
         placeholder="Search for public key starting with..."
-        description="The longer the string, the longer it will take to find a match. 1-3 characters is recommended."
+        description="The longer the string, the longer it will take to find a match. 1-4 characters is recommended."
         value={value}
         onChange={(event) => setValue(event.currentTarget.value)}
         rightSection={
           <Button
             type="submit"
-            disabled={value.length < 1 || value.length > 3}
+            disabled={value.length < 1 || value.length > 4}
             loading={loading}
             fullWidth
             onClick={() => submit(value)}
             mr={6}
           >
-            Search
+            Generate
           </Button>
         }
         rightSectionWidth={120}

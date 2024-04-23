@@ -4,6 +4,8 @@ import { VanityKeypairResult } from '@solana-keygen-worker/generate-vanity-keypa
 import { useEffect, useState } from 'react'
 import { KeypairTable } from './keypair-table'
 import { SearchForm } from './search-form'
+import { text } from 'stream/consumers'
+import { fontSizeResolver } from '@mantine/core/lib/core/Box/style-props/resolvers/font-size-resolver/font-size-resolver'
 
 export function GrindKeypairFeature({
   grind,
@@ -30,28 +32,26 @@ export function GrindKeypairFeature({
       })
       .finally(() => setLoading(false))
   }, [startsWith, trigger])
-
+  
   return (
     <UiStack gap="xl" my="lg">
-      <UiInfo
-        title="About this tool"
-        message={
-          <UiStack>
-            <Text>A vanity keypair is a keypair that starts or ends with a specific string.</Text>
+      {/* <UiInfo */}
+        {/* message={ */}
+          <UiStack style={{alignItems: 'center'}}>
+            <Text style={{fontWeight: 'bold', fontSize: 'xxx-large'}}>keypair generator in browser</Text>
             <Text>
-              For example, if you wanted to find a keypair that starts with <Code>abc</Code>, you would enter{' '}
-              <Code>abc</Code> in the search box and click <Code>Search</Code>.
+              Write prefixes that you would like to find.
             </Text>
             <Text>
-              The tool will then grind until it finds a keypair that starts with <Code>abc</Code>.
+              3 letter prefixes are found very fast. 4+ letters might take up to an hour, depending on your hardware.
             </Text>
             <Text>
-              Lastly, the tool will display the public key, secret key, and the number of iterations it took to find
+              After generation, copy the public key and private key or download the file which saved private key.
             </Text>
           </UiStack>
-        }
-      />
-      <UiCard title="Grind keypair">
+        {/* }> */}
+      {/* </UiInfo> */}
+      <UiCard title="Generate keypair">
         <UiStack gap="xl" my="lg">
           <SearchForm
             startsWith={startsWith}
