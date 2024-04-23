@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx run react-vite:serve",
     "dev:react-webpack": "nx run react-webpack:serve",
-    "build": "nx run react-vite:build"
+    "build": "nx run react-vite:build",
+    "build-webpack": "nx run react-webpack:build"
   },
   "private": true,
   "dependencies": {
