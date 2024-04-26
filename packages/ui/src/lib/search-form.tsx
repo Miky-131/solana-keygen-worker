@@ -29,7 +29,7 @@ export function SearchForm({
         rightSection={
           <Button
             type="submit"
-            disabled={value.length < 1 || value.length > 4}
+            disabled={value.length < 1 || value.length > 5}
             loading={loading}
             fullWidth
             onClick={() => submit(value)}
